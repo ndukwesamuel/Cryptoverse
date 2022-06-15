@@ -16,12 +16,10 @@ import "./App.css";
 const App = () => (
   <BrowserRouter>
     <div className="app">
-      <div className="navbar">
-        <Navbar />
-      </div>
+      <Navbar />
 
       <div className="main">
-        <Layout>
+        <Layout className="BG1">
           <div className="routes">
             <Routes>
               <Route exact path="/" element={<Homepage />} />
@@ -42,13 +40,22 @@ const App = () => (
             style={{ color: "white", textAlign: "center" }}
           >
             Copyright © 2021
-            <Link to="/">Cryptoverse Inc.</Link> <br />
+            <Link to="/" className="text-light">
+              Cryptoverse Inc.
+            </Link>{" "}
+            <br />
             All Rights Reserved.
           </Typography.Title>
           <Space>
-            <Link to="/">Home</Link>
-            <Link to="/exchanges">Exchanges</Link>
-            <Link to="/news">News</Link>
+            <Link to="/" className="text-light">
+              Home
+            </Link>
+            <Link to="/exchanges" className="text-light">
+              Exchanges
+            </Link>
+            <Link to="/news" className="text-light">
+              News
+            </Link>
           </Space>
         </div>
       </div>
